@@ -1,20 +1,20 @@
 # 🚗 License Plate Detection System
 
 ## Team Members
-- **[Your Name]** - [Your Email Address]
+- **Oluwatoyin Fadiran**
 
 ## Project Tier
-**Tier 2 (Multi-component System):** This project qualifies as Tier 2 because it integrates a high-speed YOLOv11 object detection model for localization with an advanced deep learning text recognition framework (EasyOCR) to build a multi-stage computer vision pipeline.
+**Tier 1 --> Tier 2 (Multi-component System):** This project qualifies as a Tier 1 to Tier 2 system because it integrates a YOLOv11 object detection model for localization with an advanced deep learning text recognition framework (EasyOCR) to build a computer vision pipeline.
 
 ## Problem Statement
 Manual vehicle logging and security monitoring in access-controlled environments, such as parking structures, are inefficient, prone to human error, and slow. Property managers and security teams require an automated solution to monitor vehicle entry and exit without causing traffic bottlenecks. Implementing an automated, high-speed license plate recognition system solves this by modernizing vehicle authentication and tracking infrastructure.
 
 ## Solution Overview
-The application takes raw images or video frames of vehicles as input and automatically localizes the exact coordinates of the license plate. The system then crops this region of interest, applies dedicated contrast and resolution enhancements, and passes the optimized array to an optical character recognition (OCR) engine. The final output is the extracted text string of the license plate, which can be cross-referenced against a database for automated access control.
+The application takes raw images of vehicles as input and automatically localizes the exact coordinates of the license plate. The system then crops this region of interest, applies dedicated contrast and resolution enhancements, and passes the optimized array to an optical character recognition (OCR) engine. The final output is the extracted text string of the license plate, which can be cross-referenced against a database for automated access control.
 
 ## Technical Approach
 - **CV Technique:** Multi-component (Object Detection + Text Recognition)
-- **Model Architecture:** CNN + ViT hybrid *(YOLOv11 uses an optimized CNN backbone; EasyOCR utilizes a hybrid CRAFT detector and CRNN sequence recognizer).*
+- **Model Architecture:** A convolutional neural network (CNN)-based object detection model (YOLOv11) is used to locate license plates, while EasyOCR uses deep learning to recognize the text on the plates.*
 - **Model:** YOLOv11 (Detection) and EasyOCR (Recognition)
 - **How we will use it:** Transfer learning / Fine-tuning the pretrained YOLOv11 model on targeted license plate assets, combined with the open-source pretrained EasyOCR engine for out-of-the-box character mapping.
 - **Framework:** PyTorch & OpenCV
